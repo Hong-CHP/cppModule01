@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 14:53:18 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/10/24 11:41:24 by hporta-c         ###   ########.fr       */
+/*   Created: 2025/10/24 15:29:02 by hporta-c          #+#    #+#             */
+/*   Updated: 2025/10/24 15:31:01 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-void	Zombie::annonce(void)
+void	HumanB::setWeapon(Weapon &newWeapon)
 {
-	std::cout << name;
-	std::cout << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	weapon = &newWeapon;
+}
+
+void	HumanB::attack()
+{
+	if (weapon)
+		std::cout << name << " attacks with thier " << weapon->getType() << std::endl;
+	else
+		std::cout << name << " has no weapon!!!" << std::endl;
 }

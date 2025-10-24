@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 14:53:18 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/10/24 11:41:24 by hporta-c         ###   ########.fr       */
+/*   Created: 2025/10/24 14:38:03 by hporta-c          #+#    #+#             */
+/*   Updated: 2025/10/24 17:18:25 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
-void	Zombie::annonce(void)
-{
-	std::cout << name;
-	std::cout << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+#include <iostream>
+
+class	Weapon {
+	private:
+		std::string type;
+	public:
+		Weapon(std::string newType) : type(newType) {};
+		void setType(const std::string &newType);
+		const std::string& getType() const ;
+};
+
+#endif

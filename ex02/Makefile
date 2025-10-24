@@ -5,26 +5,25 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/23 14:10:59 by hporta-c          #+#    #+#              #
-#    Updated: 2025/10/24 11:40:38 by hporta-c         ###   ########.fr        #
+#    Created: 2025/10/24 12:55:45 by hporta-c          #+#    #+#              #
+#    Updated: 2025/10/24 12:56:36 by hporta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = BraiiiiiiinnnzzzZ
-
+NAME = HI\ THIS\ IS\ BRAIN
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -I. -std=c++98
-SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp 
-OBJS = ${SRCS:.cpp=.o}
+CXXFLAGS = -Wall -Wextra -Wall -I. -std=c++98
+SRCS = main.cpp 
+OBJS = $(SRCS:.cpp=.o)
 RM = rm -f
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-		$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.cpp
-		$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJS)

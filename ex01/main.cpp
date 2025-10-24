@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 14:53:18 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/10/24 11:41:24 by hporta-c         ###   ########.fr       */
+/*   Created: 2025/10/24 11:53:16 by hporta-c          #+#    #+#             */
+/*   Updated: 2025/10/24 12:52:27 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void	Zombie::annonce(void)
+// std::for_each(horde, horde + N, annonceZombie);
+int main()
 {
-	std::cout << name;
-	std::cout << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	int N = 3;
+	Zombie *horde = zombieHorde(N, "chuchu");
+	delete[] horde;
+	return (0);
 }

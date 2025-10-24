@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 14:28:21 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/10/24 10:22:35 by hporta-c         ###   ########.fr       */
+/*   Created: 2025/10/24 15:01:30 by hporta-c          #+#    #+#             */
+/*   Updated: 2025/10/24 17:18:32 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef Zombie_HPP
-# define Zombie_HPP
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
+# include "Weapon.hpp"
 # include <iostream>
 
-class Zombie
-{
+//humanB 创建的时候不一定有武器，所以是一个新对象，是一个指针类型， 初始化NULL
+// 只有在设置武器以后，这个新的武器会被赋值给这个指针 
+class	HumanB {
 	private:
 		std::string name;
+		Weapon *weapon;
 	public:
-		Zombie(std::string name) : name(name){};
-		void annonce (void);
-		~Zombie(){
-			std::cout << name << " is destroyed!" << std::endl;
-		};
+		HumanB(std::string name) : name(name), weapon(NULL) {};
+		void setWeapon(Weapon &newweapon);
+		void attack();
 };
-
-Zombie *newZombie(std::string name);
-void	randomChump(std::string name);
 
 #endif

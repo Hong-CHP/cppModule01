@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 14:53:18 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/10/24 11:41:24 by hporta-c         ###   ########.fr       */
+/*   Created: 2025/10/24 15:27:25 by hporta-c          #+#    #+#             */
+/*   Updated: 2025/10/24 15:28:28 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
 
-void	Zombie::annonce(void)
+void HumanA::attack()
 {
-	std::cout << name;
-	std::cout << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << name << " attacks with thier " << weapon.getType() << std::endl;
 }
