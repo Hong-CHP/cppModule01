@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 11:14:53 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/10/27 11:28:21 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/10/27 13:02:46 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	Harl::debug()
 
 void	Harl::info()
 {
-	std::cout << "[INOF]" << std::endl;
+	std::cout << "[INFO]" << std::endl;
 	std::cout << "I cannot believe adding extra bacon costs more money. You didn't put enough bacon in my burger!" << std::endl;
 }
 
@@ -49,15 +49,31 @@ void	Harl::complain(std::string level)
 	switch (i) {
 		case 0:
 			debug();
+			std::cout << std::endl;
+			info();
+			std::cout << std::endl;
+			warning();
+			std::cout << std::endl;
+			error();
+			std::cout << std::endl;
 			break;
 		case 1:
 			info();
+			std::cout << std::endl;
+			warning();
+			std::cout << std::endl;
+			error();
+			std::cout << std::endl;
 			break;
 		case 2:
 			warning();
+			std::cout << std::endl;
+			error();
+			std::cout << std::endl;
 			break;
 		case 3:
 			error();
+			std::cout << std::endl;
 			break;
 		default:
 			std::cout << "[Probably complaining about insignificant problems]" << std::endl;
