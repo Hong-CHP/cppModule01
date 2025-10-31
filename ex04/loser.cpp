@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 11:15:53 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/10/27 09:42:18 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/10/31 12:08:11 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ std::string	Loser::openOldFile()
 	std::ifstream infile(filename.c_str(), std::ifstream::binary);
 	if (!infile)
 	{
-		std::cerr << "File does not exist." << std::endl;
+		std::cerr << "File does not exist or permission denied." << std::endl;
 		return "";
 	}
 	infile.seekg(0, infile.end);

@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 11:50:19 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/10/24 12:52:38 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/10/31 11:33:50 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Zombie
 	private:
 		std::string name;
 	public:
+		Zombie();
 		void setName(std::string name);
 		void annonce(void);
 		~Zombie() {
