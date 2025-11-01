@@ -6,13 +6,15 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 15:29:02 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/10/31 11:50:10 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/01 17:08:32 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) : name(name), weapon(NULL) {};
+HumanB::HumanB(std::string name) : name(name), weapon(NULL) {
+	std::cout << "HumanB " << name << " is created without weapon." << std::endl;
+}
 
 void	HumanB::setWeapon(Weapon &newWeapon)
 {

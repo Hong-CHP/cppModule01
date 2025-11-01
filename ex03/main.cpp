@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 14:37:53 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/10/31 11:55:22 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/01 17:11:00 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main()
 		HumanA bob("Bob", club);
 		bob.attack();
 		club.setType("some other type of club");
-		bob.attack();	
+		bob.attack();
 	}
 	{
 		Weapon club = Weapon("crude spiked club");

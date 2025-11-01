@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 11:49:58 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/10/31 11:39:30 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/01 16:55:32 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 Zombie::Zombie() {
 	std::cout << "Default constructor of Zombie" << std::endl;
+}
+
+Zombie::~Zombie() {
+	std::cout << name << " is destroyed!" << std::endl;
 }
 
 void	Zombie::setName(std::string name)

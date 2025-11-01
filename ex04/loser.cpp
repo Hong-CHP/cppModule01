@@ -6,11 +6,21 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 11:15:53 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/10/31 12:08:11 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/01 17:30:49 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "loser.hpp"
+
+Loser::Loser(const std::string& infile, const std::string& str1, const std::string& str2)
+			: filename(infile), s1(str1), s2(str2), newfile(filename + ".replace") {
+	std::cout << "Loser is construct." << std::endl;
+}
+			
+Loser::~Loser() {
+	if (getNewFile() != 0)
+		std::cout << "all is destroyed and deleted..." << std::endl;
+}
 
 std::string	Loser::openOldFile()
 {
